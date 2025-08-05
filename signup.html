@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Sign Up</h2>
+    <input type="text" id="signup-username" placeholder="Username" required />
+    <input type="password" id="signup-password" placeholder="Password" required />
+    <button onclick="signup()">Sign Up</button>
+    <div class="switch-link centered-text">
+      Already have an account? <a href="index.html">Login</a>
+    </div>
+  </div>
+
+  <script>
+    function signup() {
+      const username = document.getElementById('signup-username').value;
+      const password = document.getElementById('signup-password').value;
+
+      if (!username || !password) {
+        alert('Please enter a username and password.');
+        return;
+      }
+
+      localStorage.setItem('user', JSON.stringify({ username, password }));
+      alert('Signup successful!');
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>
