@@ -11,7 +11,14 @@ h1, h2 {
   text-align: center;
   margin-top: 20px;
 }
-
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+  color: #555;
+}
 /* ---------------------
    Dashboard Page Styling
 ------------------------ */
@@ -136,4 +143,5 @@ button[onclick="logout()"] {
 /* Center the switch link */
 .centered-text {
   text-align: center;
+
 }
